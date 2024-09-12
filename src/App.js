@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './Components/Header';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+import AddIcon from '@mui/icons-material/Add';
+import { useState } from 'react';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className='form'>
+        <Stack spacing={2} direction="row">
+          <TextField id="outlined-basic" label="Name" variant="outlined" />
+          <TextField id="outlined-basic" label="Email" variant="outlined" />
+          <Button variant="contained" color='error'><AddIcon /></Button>
+        </Stack>
+      </div>
     </div>
   );
 }
